@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>Blog</display-name>
+
+	<!--  <servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>com.ping.blog.controller.LoginController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/login.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>QueryArticleController</servlet-name>
+		<servlet-class>com.ping.blog.controller.QueryArticleController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QueryArticleController</servlet-name>
+		<url-pattern>/queryArticles.do</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>InsertArticleController</servlet-name>
+		<servlet-class>com.ping.blog.controller.InsertArticleController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>InsertArticleController</servlet-name>
+		<url-pattern>/insertArticle.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>UpdateArticleController</servlet-name>
+		<servlet-class>com.ping.blog.controller.UpdateArticleController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateArticleController</servlet-name>
+		<url-pattern>/updateArticle.do</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DeleteArticleController</servlet-name>
+		<servlet-class>com.ping.blog.controller.DeleteArticleController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DeleteArticleController</servlet-name>
+		<url-pattern>/deleteArticle.do</url-pattern>
+	</servlet-mapping>
+	-->
+
+
+	<servlet>
+		<servlet-name>DispacherServlet</servlet-name>
+		<servlet-class>com.ping.blog.servlet.DispacherServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DispacherServlet</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>input</filter-name>
+		<filter-class>com.ping.blog.filter.InputFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>input</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>com.ping.blog.servlet.MyServletContextListener</listener-class>
+	</listener>
+
+</web-app>
